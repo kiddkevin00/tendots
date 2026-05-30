@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TenDots — Support</title>
+  <meta name="description" content="Support and FAQ for TenDots." />
+  <meta name="theme-color" content="#f7f4ec" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="page">
+
+  <header class="masthead">
+    <a class="wordmark" href="./" aria-label="TenDots home">
+      <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+  <rect x="3.2" y="3.2" width="13" height="15.5" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <rect x="7.8" y="7.8" width="13" height="15.5" rx="1.6" fill="var(--paper)" stroke="currentColor" stroke-width="1.5"/>
+</svg>
+      Ten <em>Dots</em>
+    </a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="./" aria-current="page">Support</a><a href="privacy.html">Privacy</a><a href="https://github.com/kiddkevin00/tendots">GitHub</a>
+    </nav>
+  </header>
+
+  <section class="mast" aria-labelledby="mast-title">
+    <p class="eyebrow">Support<span class="dot"></span>The manual</p>
+    <h1 class="display" id="mast-title">
+      Ten<br>
+      <em>Dots<span class="punct">.</span></em>
+    </h1>
+    <div class="mast-rule" aria-hidden="true"></div>
+    <p class="lede">A quiet number puzzle for iPhone in the spirit of the pen-and-paper classic. Tap two numbers that <em>match</em> or <em>sum to ten</em>. Clear the board.</p>
+    <p class="meta">v1.0.0<span class="sep">·</span>iPhone · iOS 16+</p>
+  </section>
+
+  <main>
+
+    <article class="doc">
+      <aside class="doc-num" aria-hidden="true">01</aside>
+      <section class="doc-body">
+        <p class="doc-eyebrow">Overview</p>
+        <h2>How to play</h2>
+        <p>You start with nineteen numbers laid out across the board. Tap two cells to clear them — they must be either the same value or sum to ten.</p><ul><li>The two cells must be next to each other in reading order, in the same column, or on a diagonal — with only crossed-out cells between them.</li><li>Tap <strong>Hint</strong> to highlight one valid pair.</li><li>When you're stuck, tap <strong>Add</strong> to copy the remaining numbers to the bottom and keep going.</li><li>Goal: clear the whole board. Best score is the fewest adds.</li></ul>
+      </section>
+    </article>
+
+    <article class="doc">
+      <aside class="doc-num" aria-hidden="true">02</aside>
+      <section class="doc-body">
+        <p class="doc-eyebrow">Origin</p>
+        <h2>Is this a clone of something?</h2>
+        <p>No. The match-the-same-or-sum-to-ten mechanic is a pen-and-paper puzzle from before the App Store existed (you may have seen it as "Take Ten" or "Numerica"). TenDots is an original implementation with its own UI and code — no assets, naming, or branding from any specific app are reused.</p>
+      </section>
+    </article>
+
+    <article class="doc">
+      <aside class="doc-num" aria-hidden="true">03</aside>
+      <section class="doc-body">
+        <p class="doc-eyebrow">Strategy</p>
+        <h2>Tips that actually help</h2>
+        <p>Two habits make a real difference: clear pairs that bridge the end of one row to the start of the next (those slots disappear faster than you'd think), and prefer matches that crush cells in the middle of a column before they get stuck behind other live numbers.</p>
+      </section>
+    </article>
+
+    <article class="doc">
+      <aside class="doc-num" aria-hidden="true">04</aside>
+      <section class="doc-body">
+        <p class="doc-eyebrow">Data</p>
+        <h2>What does the app remember?</h2>
+        <p>Only your fewest-adds best, your total board-clears, and whether you've toggled haptics off. Everything else is the current board state, which lives only in memory until you reset.</p>
+      </section>
+    </article>
+
+  </main>
+
+  <aside class="contact-card">
+    <p class="eyebrow">Card<span class="dot"></span>No. 01</p>
+    <h3>Need help, or want to <em>report a bug</em>?</h3>
+    <p>Open an issue on GitHub. There's no support email — issues are the canonical channel and they're public, which keeps everything honest.</p>
+    <p class="link-row"><a href="https://github.com/kiddkevin00/tendots/issues">github.com/kiddkevin00/tendots/issues</a></p>
+  </aside>
+
+  <footer class="colophon">
+    <div class="colophon-left">
+      <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+  <rect x="3.2" y="3.2" width="13" height="15.5" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <rect x="7.8" y="7.8" width="13" height="15.5" rx="1.6" fill="var(--paper)" stroke="currentColor" stroke-width="1.5"/>
+</svg>
+      Ten <em>Dots</em> · Mark Utility Labs
+    </div>
+    <nav class="colophon-meta" aria-label="Footer">
+      <a href="privacy.html">Privacy</a>
+      <a href="https://github.com/kiddkevin00/tendots">Source</a>
+      <a href="https://github.com/kiddkevin00/tendots/issues">Issues</a>
+    </nav>
+  </footer>
+
+</div>
+</body>
+</html>
