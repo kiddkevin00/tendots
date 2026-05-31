@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>TenDots — Same. Or sum to ten.</title>
-<meta name="description" content="A quiet number puzzle for iPhone in the spirit of the pen-and-paper classic. Tap two numbers that match or sum to 10. Clear the board." />
+<title>TenDots — Match. Sum to ten. Clear.</title>
+<meta name="description" content="A quiet number puzzle for iPhone in the spirit of the pen-and-paper classic. Tap two numbers that match or sum to ten. Clear the board in the fewest adds." />
 <meta name="theme-color" content="#f2f5fa" />
-<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400..700;1,400..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="app.css" />
 </head>
 <body>
@@ -22,13 +22,13 @@
 
   <section class="hero" aria-labelledby="hero-title">
     <p class="hero-eyebrow"><span class="beta-badge">Now in beta · iOS via Expo Go</span></p>
-    <h1 id="hero-title">Same. Or sum to ten.</h1>
-    <p class="lede">A quiet number puzzle for iPhone in the spirit of the pen-and-paper classic. Tap two numbers that match or sum to 10. Clear the board.</p>
+    <h1 id="hero-title">Match. Sum to ten. Clear.</h1>
+    <p class="lede">A quiet number puzzle for iPhone in the spirit of the pen-and-paper classic. Tap two numbers that match or sum to ten. Clear the board in the fewest adds.</p>
     <div class="cta-row">
       <a class="cta-primary" href="https://github.com/kiddkevin00/tendots" rel="noopener" target="_blank">★ Star on GitHub</a>
       <a class="cta-secondary" href="#howtoplay">How it works →</a>
     </div>
-    <p class="trust-row"><span>Offline</span><span>No ads</span><span>No IAP</span><span>Open source</span></p>
+    <p class="trust-row"><span>Offline-first</span><span>No ads</span><span>No accounts</span><span>Open source</span></p>
   </section>
 
   <section id="features" aria-labelledby="features-h">
@@ -36,12 +36,12 @@
     <h2 id="features-h">What's in the build</h2>
     <p class="subhead">The whole feature set, plainly listed — no upsells gating the basics.</p>
     <div class="feature-grid">
-      <article class="feature-card"><span class="feature-icon">◐</span><h3>Two simple rules</h3><p>Match same value OR sum to ten. Cells must be next to each other in reading order, same column, or diagonal — with only crossed-out cells between.</p></article>
-      <article class="feature-card"><span class="feature-icon">✦</span><h3>Hint button</h3><p>When you're stuck, Hint highlights one valid pair. When no pair exists, it tells you.</p></article>
-      <article class="feature-card"><span class="feature-icon">+</span><h3>Add appends</h3><p>Stuck? Tap Add to copy the remaining live numbers to the bottom of the board. Try again.</p></article>
-      <article class="feature-card"><span class="feature-icon">◷</span><h3>Fewer adds wins</h3><p>Your best score for the board is the fewest adds used to clear it. The lower the better.</p></article>
-      <article class="feature-card"><span class="feature-icon">◍</span><h3>Classic opening</h3><p>Starts with the standard 19-number seed used by the pen-and-paper original. Same opening every fresh game; the play diverges from there.</p></article>
-      <article class="feature-card"><span class="feature-icon">⊘</span><h3>Local everything</h3><p>Best score, total clears, haptics toggle — all on-device. Nothing transmitted.</p></article>
+      <article class="feature-card"><span class="feature-icon">▦</span><h3>9-wide board</h3><p>Opens with the standard 19-number seed laid out left-to-right, top-to-bottom — the classic Take Ten opening.</p></article>
+      <article class="feature-card"><span class="feature-icon">✦</span><h3>Three adjacency rules</h3><p>Two cells match if they're consecutive in reading order, same column, or on a diagonal — with only crossed-out cells between them.</p></article>
+      <article class="feature-card"><span class="feature-icon">⊕</span><h3>Same or sum-to-ten</h3><p>The two cells must be either equal in value OR sum to ten (1+9, 2+8, 3+7, 4+6, 5+5).</p></article>
+      <article class="feature-card"><span class="feature-icon">?</span><h3>Hint</h3><p>Tap Hint to highlight one valid pair. Picks brute-force from all live cells; if none exist, opens the No pairs left dialog.</p></article>
+      <article class="feature-card"><span class="feature-icon">↻</span><h3>Add row</h3><p>When you're stuck, Add appends the remaining live numbers to the bottom. The fewer adds it takes you to clear, the better.</p></article>
+      <article class="feature-card"><span class="feature-icon">✦</span><h3>Fewest-adds high score</h3><p>Best score is the smallest adds-to-clear you've achieved. Total clears are also tracked. No leaderboard server.</p></article>
     </div>
   </section>
 
@@ -50,10 +50,11 @@
     <h2 id="howto-h">From cold-start to good-at-it</h2>
     <p class="subhead">A few short steps. The app gets out of your way after that.</p>
     <div class="steps-grid">
-      <article class="step-card"><span class="step-num">01</span><h3>Tap two numbers</h3><p>Either same value (e.g. 4 + 4) or sum to ten (e.g. 3 + 7). The pair gets crossed out.</p></article>
-      <article class="step-card"><span class="step-num">02</span><h3>Mind adjacency</h3><p>The two cells must be next to each other in reading order, the same column, or on a diagonal — with only crossed-out cells between them.</p></article>
-      <article class="step-card"><span class="step-num">03</span><h3>When stuck, hint or add</h3><p>Hint highlights one valid pair. Add copies remaining numbers to the bottom of the board.</p></article>
-      <article class="step-card"><span class="step-num">04</span><h3>Clear the whole board</h3><p>Goal: cross out every cell. The fewer Adds you used, the better the score.</p></article>
+      <article class="step-card"><span class="step-num">01</span><h3>Tap a cell</h3><p>First tap selects the cell — it turns accent-color. Tap it again to deselect.</p></article>
+      <article class="step-card"><span class="step-num">02</span><h3>Tap a second cell</h3><p>If the two cells form a valid pair (same or sum-to-10, adjacent per the three rules), both cross out. If not, the new tap becomes the new selection.</p></article>
+      <article class="step-card"><span class="step-num">03</span><h3>Watch the pairs accumulate</h3><p>The subtitle counts pairs cleared and how many cells are still live. The board never erases — crossed cells stay greyed.</p></article>
+      <article class="step-card"><span class="step-num">04</span><h3>Tap Hint when stuck</h3><p>Hint highlights one valid pair. Use it to learn the adjacency rules without spoiling too much.</p></article>
+      <article class="step-card"><span class="step-num">05</span><h3>Add a row to keep going</h3><p>When no more pairs exist, tap Add. The remaining live cells are copied to the bottom and the game continues. Try to clear the board in the fewest adds.</p></article>
     </div>
   </section>
 
@@ -61,7 +62,7 @@
     <p class="eyebrow">Screenshots</p>
     <h2 id="shots-h">What it looks like on a phone</h2>
     <p class="subhead">Captured from the running app at iPhone 14 viewport.</p>
-    <div class="shots-empty">Screenshots from the running app are coming soon.</div>
+    <div class="shots-grid"><figure class="shot-card"><img src="screenshots/01-board.png" alt="Cold opening. The classic 19-number seed laid out on a 9-wide board, stats bar above, Hint / Add / Reset below. screenshot" loading="lazy" /><figcaption class="shot-caption"><span class="n">01</span><span>Cold opening. The classic 19-number seed laid out on a 9-wide board, stats bar above, Hint / Add / Reset below.</span></figcaption></figure><figure class="shot-card"><img src="screenshots/02-selected.png" alt="First tap selects a cell. Tap a second cell to attempt a match — same value or sum-to-ten, with valid adjacency. screenshot" loading="lazy" /><figcaption class="shot-caption"><span class="n">02</span><span>First tap selects a cell. Tap a second cell to attempt a match — same value or sum-to-ten, with valid adjacency.</span></figcaption></figure></div>
   </section>
 
   <footer class="colophon">

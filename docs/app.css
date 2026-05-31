@@ -3,18 +3,18 @@
 :root {
   --bg:          #f2f5fa;
   --surface:     #ffffff;
-  --ink:         #1c1b22;
-  --ink-muted:   #54596a;
-  --ink-subtle:  #878d9e;
-  --rule:        #d4d8e2;
-  --rule-soft:   #e6e9f0;
+  --ink:         #0f1d2e;
+  --ink-muted:   #4a5a72;
+  --ink-subtle:  #7e8aa0;
+  --rule:        #d6dde8;
+  --rule-soft:   #e4eaf2;
   --accent:      #345b7d;
   --accent-deep: #1f3a55;
   --accent-rgb:  52, 91, 125;
 
-  --font-display: 'Spectral', 'Iowan Old Style', Georgia, serif;
-  --font-body:    'Inter', system-ui, sans-serif;
-  --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+  --font-display: 'Spectral', 'Hoefler Text', Georgia, serif;
+  --font-body:    'Inter', -apple-system, system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, Menlo, monospace;
 
   --shadow-card: 0 1px 2px rgba(0,0,0,0.05), 0 10px 24px -12px rgba(0,0,0,0.12);
   --measure: 40rem;
@@ -131,14 +131,14 @@ a:hover { color: var(--accent-deep); text-decoration: underline; text-underline-
 
 .hero h1 {
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 600;
   font-size: clamp(40px, 7vw, 76px);
   line-height: 1.03;
   letter-spacing: -0.025em;
   color: var(--ink);
   margin-bottom: 24px;
   max-width: 16em;
-  font-style: italic;
+  
 }
 
 
@@ -202,14 +202,14 @@ section:first-of-type { padding-top: 32px; }
 
 section h2 {
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 600;
   font-size: clamp(28px, 4vw, 42px);
   line-height: 1.1;
   letter-spacing: -0.018em;
   color: var(--ink);
   margin-bottom: 12px;
   max-width: 24em;
-  font-style: italic;
+  
 }
 
 section .subhead {

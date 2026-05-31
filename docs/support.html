@@ -6,7 +6,7 @@
 <title>TenDots — Support</title>
 <meta name="description" content="Support and FAQ for TenDots." />
 <meta name="theme-color" content="#f2f5fa" />
-<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400..700;1,400..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="app.css" />
 </head>
 <body>
@@ -27,7 +27,7 @@
   </section>
 
   <section style="padding-top:0">
-    <div class="faq"><details><summary>Is this a clone of something?</summary><p>No. The same-or-sum-to-ten mechanic is a pen-and-paper puzzle that predates the App Store (Take Ten / Numerica). TenDots is an original implementation with its own UI, code, and branding.</p></details><details><summary>Is there a daily puzzle?</summary><p>Not yet. The opening sequence is fixed and deterministic; the variability comes from the order you choose to clear pairs.</p></details><details><summary>Can I undo?</summary><p>Not yet. Reset clears the board to start over. Per-move undo is on the roadmap.</p></details><details><summary>What's the absolute minimum adds?</summary><p>Depends on play order. Aim for zero adds — it's possible on the standard opening with very careful play.</p></details></div>
+    <div class="faq"><details><summary>Is this a clone of any specific app?</summary><p>No. The same-or-sum-to-ten mechanic is a pen-and-paper puzzle from before the App Store existed (sometimes called Take Ten or Numerica). TenDots is an original implementation with its own UI and code.</p></details><details><summary>What counts as adjacent?</summary><p>Two cells are adjacent if every cell strictly between them is already crossed out, in one of three orderings: reading order (left-to-right, top-to-bottom), same column, or same diagonal.</p></details><details><summary>Can I undo a wrong match?</summary><p>No undo by design — it would trivialize the puzzle. Restart if you want a fresh board.</p></details><details><summary>What does the high score mean?</summary><p>Lowest adds-to-clear you've achieved. The first time you clear, that becomes your best; subsequent clears with fewer adds replace it.</p></details><details><summary>Is anything sent anywhere?</summary><p>No. Best score, total clears, and the haptics setting are stored on this device only via AsyncStorage. No analytics, no third-party SDKs.</p></details></div>
   </section>
 
   <aside class="contact-card">
